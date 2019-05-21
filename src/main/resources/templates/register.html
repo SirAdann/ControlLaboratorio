@@ -182,13 +182,8 @@
                     <legend>Permisos</legend>
                     <div class="form-group">
                         <label class="col-sm-2 control-label">Administrador</label>
-                        <div class="col-sm-10">
-                            <label class="radio-inline">
-                                <input type="radio" th:checked="*{administrador}"  value="true" name="newsletter">
-                                Si</label>
-                            <label class="radio-inline">
-                                <input type="radio" th:checked="*{administrador}" value="false" name="newsletter">
-                                No</label>
+                        <div class="col-sm-1">
+                            <input type="checkbox" name="enabled" class="form-control" th:field="*{administrador}" th:value="${administrador}"></input>
                         </div>
                     </div>
                 </fieldset>
