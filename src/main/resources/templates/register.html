@@ -143,8 +143,7 @@
                     <div class="form-group required">
                         <label  class="col-sm-2 control-label">ID Usuario</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="input-email" placeholder="Matricula o Numero De Empleado" th:if="${usuarioModel.idUsuario != none}" th:field="*{idUsuario}" th:value="${idUsuario}"></input>
-                            <input type="hidden" class="form-control" th:field="*{idUsuario}" th:value="${idUsuario}"></input>
+                            <input type="text" disabled="true" class="form-control" id="input-email" placeholder="Matricula o Numero De Empleado" th:if="${usuarioModel.idUsuario != none}" th:field="*{idUsuario}" th:value="${idUsuario}"></input>
                             <input type="text" class="form-control" id="input-email" placeholder="Matricula o Numero De Empleado"th:if="${usuarioModel.idUsuario == none}" th:field="*{idUsuario}" th:value="${idUsuario}"></input>
                         </div>
                     </div>
@@ -195,7 +194,7 @@
                     </div>
 
                     <div class="pull-right"><a class="salir" href="login.html"><b></b></a>
-                        <a class="btn btn-primary" th:href="@{/user/cancel}">Cancelar</a>
+                        <a class="btn btn-primary" th:href="@{/index}">Cancelar</a>
 
                     </div>
 
