@@ -41,11 +41,12 @@ public class UserController {
     @GetMapping("/form")
     public String redirectUserForm(Model model, @RequestParam(name = "idUsuario", required = false) String idUsuario) {
 
-idUsuario="none";
         UsuarioModel usuarioModel = new UsuarioModel();
         if(!idUsuario.equals("none")) {
             usuarioModel = usuarioService.findUserByIdUsuarioModel(idUsuario);
+            System.out.println("MODELO : "+usuarioModel);
         }
+
         model.addAttribute("usuarioModel",usuarioModel);
         return ViewConstants.USERS_FORM;
     }
@@ -58,17 +59,17 @@ idUsuario="none";
             model.addAttribute("result", 1);
         else
             model.addAttribute("result", 0);
-        return "redirect:/user/form";
+        return "redirect:/user/index";
     }
 
 
 
 
-   // @GetMapping("/removeuser")
-    //public ModelAndView removeUser(@RequestParam(name = "username", required = true) String username) {
-      //  userService.removeUser(username);
-        //return showUsers();
-    //}
+    @GetMapping("/remove")
+    public ModelAndView removeUser(@RequestParam(name = "idUsuario", required = true) String idUsuario) {
+       usuarioService.removerUsuario(idUsuario);
+        return mostrarUsuarios();
+    }
 
 
 

@@ -2,10 +2,7 @@ package prubalaboratorio.demo.Entity;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -21,14 +18,12 @@ public class BitacoraPrestamos implements Serializable {
     private int idMaterial;
     @Column(name="fecha")
     private Date fecha;
-    @Column(name="id_estado")
-    private int idEstado;
+    @OneToOne
+    @JoinColumn(name="id_estado",nullable = false)
+    private EstadoPrestamos idEstado;
 
 
-    public BitacoraPrestamos(int idSolicitante, int idMaterial, Date fecha, int idEstado) {
-        this.idSolicitante = idSolicitante;
-        this.idMaterial = idMaterial;
-        this.fecha = fecha;
-        this.idEstado = idEstado;
+    public BitacoraPrestamos() {
+
     }
 }

@@ -45,12 +45,17 @@ public class UsuarioServiceImpl implements UsuarioService {
 
     @Override
     public Usuario findUsuarioByIdUsuario(String idUsuario) {
-        return null;
+
+
+
+        return usuarioRepository.findByIdUsuario(idUsuario);
     }
 
     @Override
     public void removerUsuario(String idUsuario) {
-
+        Usuario usuario = findUsuarioByIdUsuario(idUsuario);
+        if(usuario != null)
+            usuarioRepository.delete(findUsuarioByIdUsuario(idUsuario));
     }
 
     @Override
