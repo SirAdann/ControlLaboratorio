@@ -15,6 +15,7 @@ public class MaterialConverter {
     @Qualifier("tipoMaterialRepository")
     private TipoMaterialRepository tipoMaterialRepository;
 
+
     public Material convertirMaterialModelaMaterial(MaterialModel materialModel){
         Material material = new Material();
 
@@ -24,7 +25,7 @@ public class MaterialConverter {
         material.setCantidad(materialModel.getCantidad());
         material.setModelo(materialModel.getModelo());
 
-        TipoMaterial tipoMaterial = tipoMaterialRepository.findByIdTipoMaterial(materialModel.getIdTipoMaterial);
+        TipoMaterial tipoMaterial = tipoMaterialRepository.findByIdTipoMaterial(materialModel.getTipoMaterial());
         material.setRam(materialModel.getRam());
         material.setProcesador(materialModel.getProcesador());
         material.setCapacidad(materialModel.getCapacidad());
@@ -33,12 +34,12 @@ public class MaterialConverter {
         material.setEstadoMaterial(materialModel.getEstadoMaterial());
         material.setSolicitante(materialModel.getSolicitante());
 
-        material.setIdtipomaterial(tipoMaterial);
+        material.setTipoMaterial(tipoMaterial);
 
         return material;
     }
 
-    public Material convertirMaterialaMaterialModel(Material material){
+    public MaterialModel convertirMaterialaMaterialModel(Material material){
 
         MaterialModel materialModel = new MaterialModel();
         materialModel.setIdMaterial(material.getIdMaterial());
@@ -46,7 +47,7 @@ public class MaterialConverter {
         materialModel.setCantidad(material.getCantidad());
         materialModel.setModelo(material.getModelo());
 
-        materialModel.setIdTipoMaterial(material.getIdtipomaterial().getIdTipoMaterial());
+        materialModel.setTipoMaterial(material.getTipoMaterial().getIdTipoMaterial());
         materialModel.setRam(material.getRam());
         materialModel.setProcesador(material.getProcesador());
         materialModel.setCapacidad(material.getCapacidad());
