@@ -16,7 +16,6 @@ public class EquipoConverter {
         equipo.setIdEquipo(equipoModel.getIdEquipo());
         equipo.setMarca(equipoModel.getMarca());
         equipo.setCosto(equipoModel.getCosto());
-        equipo.setCantidad(equipoModel.getCantidad());
         equipo.setModelo(equipoModel.getModelo());
 
         equipo.setRam(equipoModel.getRam());
@@ -36,7 +35,6 @@ public class EquipoConverter {
         EquipoModel equipoModel = new EquipoModel();
         equipoModel.setIdEquipo(equipo.getIdEquipo());
         equipoModel.setCosto(equipo.getCosto());
-        equipoModel.setCantidad(equipo.getCantidad());
         equipoModel.setModelo(equipo.getModelo());
 
         equipoModel.setRam(equipo.getRam());

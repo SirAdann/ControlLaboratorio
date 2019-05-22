@@ -17,8 +17,7 @@ public class Equipo {
     private String marca;
     @Column(name="costo",nullable = false)
     private Double costo;
-    @Column(name="cantidad",nullable = false)
-    private int cantidad;
+
     @Column(name="modelo",nullable = false)
     private String modelo;
 

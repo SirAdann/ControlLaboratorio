@@ -12,7 +12,6 @@ public class EquipoModel {
     private int idEquipo;
     private String marca;
     private Double costo;
-    private int cantidad;
     private String modelo;
     private int tipoEquipo;
     private int ram;
