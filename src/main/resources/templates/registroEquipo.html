@@ -36,6 +36,11 @@
                         <div class="language">
                             <form action="#" method="post" enctype="multipart/form-data" id="language">
                                 <div class="btn-group">
+                                    <button class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> <img th:src="@{/image/flags/gb.png}" alt="English" title="English">English <i class="fa fa-caret-down"></i></button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><img th:src="@{/image/flags/lb.png}" alt="Arabic" title="Arabic"> Arabic</a></li>
+                                        <li><a href="#"><img th:src="@{/image/flags/gb.png}" alt="English" title="English"> English</a></li>
+                                    </ul>
 
                                 </div>
                             </form>
@@ -116,7 +121,7 @@
         <div class="col-sm-9" id="content">
             <h1>Registro Equipo Computo</h1>
 
-            <form class="form-horizontal" enctype="multipart/form-data" action="#" th:action="@{/equipo/addequipo}" th:object="${equipoModel}" method="post">
+            <form class="form-horizontal" enctype="multipart/form-data" action="#" th:action="@{/materiales/addequipo}" th:object="${equipoModel}" method="post">
                 <fieldset id="account">
                     <legend>Datos del Equipo</legend>
                     <div style="display: none;" class="form-group required">
@@ -134,8 +139,9 @@
                         <label  class="col-sm-2 control-label">ID Equipo</label>
                         <div class="col-sm-10">
                             <!--<input type="text" class="form-control" id="idEquipo" placeholder="ID Equipo" value="" name="firstname">-->
-                            <input type="text" readonly class="form-control" id="input-email" placeholder="ID de Equipo" th:if="${equipoModel.idEquipo != none}" th:field="*{idEquipo}" th:value="${idEquipo}"></input>
-                            <input type="text" class="form-control" id="input-email" placeholder="ID de Equipo"th:if="${equipoModel.idEquipo == none}" th:field="*{idEquipo}" th:value="${idEquipo}"></input>
+                            <input type="text" readonly class="form-control" id="input-email" placeholder="ID de Equipo" th:if="${equipoModel.idEquipo != 0}" th:field="*{idEquipo}" th:value="${idEquipo}"></input>
+                            <input type="text" class="form-control" id="input-email" placeholder="ID de Equipo"th:if="${equipoModel.idEquipo == 0}" th:field="*{idEquipo}" th:value="${idEquipo}"></input>
+
                         </div>
                     </div>
                     <div class="form-group required">
@@ -152,13 +158,7 @@
                             <input type="text" class="form-control" placeholder="Costo"  name="costos" th:field="*{costo}" th:value="${costo}"></input>
                         </div>
                     </div>
-                    <div class="form-group required">
-                        <!--<label for="input-sort" class="col-sm-2 control-label">Cantidad</label>-->
-                        <label  class="col-sm-2 control-label">Cantidad</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="Cantidad"  name="cantidadess" th:field="*{cantidad}" th:value="${cantidad}"></input>
-                        </div>
-                    </div>
+
                     <div class="form-group required">
                         <!--<label for="input-sort" class="col-sm-2 control-label">Modelo</label>-->
                         <label  class="col-sm-2 control-label">Modelo</label>
@@ -168,22 +168,23 @@
                     </div>
                     <div class="form-group required">
                         <!--<label for="input-sort" class="col-sm-2 control-label">ID Tipo De Material</label>-->
-                        <label  class="col-sm-2 control-label">ID Tipo de Material</label>
+                        <label  class="col-sm-2 control-label"> Tipo de Equipo</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="id tipo" placeholder="ID Tipo De Material" value="" name="ID Tipo De Material">
+                            <input type="text" class="form-control" placeholder="Tipo"  name="tipos" th:field="*{tipoEquipo}" th:value="${tipoEquipo}"></input>
                         </div>
                     </div>
                     <div class="form-group required">
                         <!--<label for="input-sort" class="col-sm-2 control-label">Ram</label>-->
                         <label  class="col-sm-2 control-label">Ram</label>
                         <div class="col-sm-10">
-                            <select class="form-control" id="ram" name="Ram">
-                                <option value=""> --- Seleccione --- </option>
-                                <option value="1">2 GB</option>
-                                <option value="2">4 GB</option>
-                                <option value="3">8 GB</option>
-                                <option value="4">16 GB</option>
+                            <select class="form-control" id="ram" name="Ram" th:field="*{ram}">
+                                <!--<option th:value=""> --- Seleccione --- </option>-->
+                                <option th:value="2">2 GB</option>
+                                <option th:value="4">4 GB</option>
+                                <option th:value="8">8 GB</option>
+                                <option th:value="16">16 GB</option>
                             </select>
+
                         </div>
                     </div>
                     <div class="form-group required">
@@ -209,11 +210,20 @@
                     </div>
                     <div class="form-group required">
                         <!--<label for="input-sort" class="col-sm-2 control-label">Estado</label>-->
-                        <label  class="col-sm-2 control-label">Estado</label>
+                        <label  class="col-sm-2 control-label">Tipo de uso</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="Estado"  name="estados" th:field="*{estado}" th:value="${estado}"></input>
+                            <input type="text" class="form-control" placeholder="Uso"  name="usos" th:field="*{tipoUso}" th:value="${tipoUso}"></input>
                         </div>
                     </div>
+
+
+                    <div class="form-group required">
+                    <!--<label for="input-sort" class="col-sm-2 control-label">Estado</label>-->
+                    <label  class="col-sm-2 control-label">Estado</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="Estado"  name="estados" th:field="*{estadoEquipo}" th:value="${estadoEquipo}"></input>
+                    </div>
+                </div>
 
                     <br><br>
 
@@ -227,7 +237,7 @@
                     </div>
 
                     <div class="pull-right"><a class="salir" href="login.html"><b></b></a>
-                        <a class="btn btn-primary" href="login.html">Cancelar</a>
+                        <a class="btn btn-primary" th:href="@{/form}">Cancelar</a>
 
                     </div>
 

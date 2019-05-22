@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import prubalaboratorio.demo.Constant.ViewConstants;
 import prubalaboratorio.demo.Model.EquipoModel;
-import prubalaboratorio.demo.Model.UsuarioModel;
 import prubalaboratorio.demo.Service.impl.EquipoServiceImpl;
 
 @Controller
@@ -39,10 +38,11 @@ public class EquipoController {
     }
 
     @GetMapping("/form")
-    public String redirectEquipoForm(Model model, @RequestParam(name = "idEquipo", required = false) int idEquipo) {
-
+    public String redirectEquipoForm(Model model, @RequestParam(name = "idEquipo", required = false) Integer idEquipo) {
+    idEquipo=0;
 
         EquipoModel equipoModel = new EquipoModel();
+
         if(idEquipo!=0) {
             equipoModel = equipoService.findEquipoByIdEquipoModel(idEquipo);
             System.out.println("MODELO : "+ equipoModel);
@@ -53,13 +53,13 @@ public class EquipoController {
     }
 
     @PostMapping("/addequipo")
-    public String addUser(@ModelAttribute(name = "equipoModel") EquipoModel equipoModel, Model model) {
+    public String addEquipo(@ModelAttribute(name = "equipoModel") EquipoModel equipoModel, Model model) {
         log.info("Method: addEquipo() -- Params: " + equipoModel.toString());
         if (equipoService.addEquipo(equipoModel) != null)
             model.addAttribute("result", 1);
         else
             model.addAttribute("result", 0);
-        return "redirect:/materiales/index";
+        return "redirect:/materiales/form";
     }
 
     @GetMapping("/remove")
