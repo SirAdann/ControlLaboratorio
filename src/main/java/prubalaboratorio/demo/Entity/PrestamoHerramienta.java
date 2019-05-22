@@ -8,22 +8,22 @@ import java.util.Date;
 
 @Data
 @Entity
-@Table(name="bitacora_prestamos")
-public class BitacoraPrestamos implements Serializable {
+@Table(name="prestamo_herramientas")
+public class PrestamoHerramienta implements Serializable {
     @Id
     @Column(name="id_solicitante")
     private int idSolicitante;
     @Id
-    @Column(name="id_material")
-    private int idMaterial;
+    @Column(name="id_equipo")
+    private int idEquipo;
     @Column(name="fecha")
     private Date fecha;
     @OneToOne
     @JoinColumn(name="id_estado",nullable = false)
-    private EstadoPrestamos idEstado;
+    private EstadoPrestamoHerramienta idEstado;
 
 
-    public BitacoraPrestamos() {
+    public PrestamoHerramienta() {
 
     }
 }

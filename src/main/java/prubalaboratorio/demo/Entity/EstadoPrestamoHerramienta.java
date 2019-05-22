@@ -6,8 +6,8 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name="estado_prestamos")
-public class EstadoPrestamos {
+@Table(name="estado_prestamo_herramientas")
+public class EstadoPrestamoHerramienta {
     @Id
     @GeneratedValue
     @Column(name="id_estado")
@@ -15,7 +15,7 @@ public class EstadoPrestamos {
     @Column(name="estado")
     String estado;
 
-    public EstadoPrestamos(){
+    public EstadoPrestamoHerramienta(){
 
     }
 

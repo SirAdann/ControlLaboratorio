@@ -3,14 +3,14 @@ package prubalaboratorio.demo.Model;
 import lombok.Data;
 
 @Data
-public class BitacoraPrestamosModel {
+public class PrestamoEquipoModel {
 
     private int idSolicitante;
-    private int idMaterial;
+    private int idEquipo;
     private String fecha;
     private int idEstado;
 
-    public BitacoraPrestamosModel(){
+    public PrestamoEquipoModel(){
 
     }
 }

@@ -27,19 +27,18 @@ public class Solicitante {
     private TipoSolicitante idTipoSolicitante;
 
     @ManyToMany
-    @JoinTable (name = "bitacora_prestamos",
+    @JoinTable (name = "prestamo_equipos",
             joinColumns = @JoinColumn(name = "id_solicitante"),
-            inverseJoinColumns = @JoinColumn(name = "id_material"))
-    private Set<Material> materiales;
+            inverseJoinColumns = @JoinColumn(name = "id_equipo"))
+    private Set<Equipo> equipos;
 
-    public Solicitante(int idSolicitante, String nombres, String apellidos, String carrera, String semestre, int estado, TipoSolicitante idTipoSolicitante, Set materialesSet) {
-        IdSolicitante = idSolicitante;
-        this.nombres = nombres;
-        this.apellidos = apellidos;
-        this.carrera = carrera;
-        this.semestre = semestre;
-        this.estado = estado;
-        this.idTipoSolicitante = idTipoSolicitante;
-        this.materiales = materiales;
+    @ManyToMany
+    @JoinTable (name = "prestamo_herramientas",
+            joinColumns = @JoinColumn(name = "id_solicitante"),
+            inverseJoinColumns = @JoinColumn(name = "id_herramienta"))
+    private Set<Herramienta> herramientas;
+
+    public Solicitante() {
+
     }
 }

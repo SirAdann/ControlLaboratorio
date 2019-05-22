@@ -1,5 +1,6 @@
 package prubalaboratorio.demo.Service;
 
+import org.springframework.stereotype.Service;
 import prubalaboratorio.demo.Entity.Usuario;
 import prubalaboratorio.demo.Model.UsuarioModel;
 

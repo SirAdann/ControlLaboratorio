@@ -6,24 +6,24 @@ import prubalaboratorio.demo.Entity.Solicitante;
 import java.util.Set;
 
 @Data
-public class MaterialModel {
+public class EquipoModel {
 
 
-    private int idMaterial;
+    private int idEquipo;
     private String marca;
     private Double costo;
     private int cantidad;
     private String modelo;
-    private String tipoMaterial;
+    private int tipoEquipo;
     private int ram;
     private String procesador;
     private int capacidad;
     private String sOperativo;
     private int tipoUso;
-    private int estadoMaterial;
+    private int estadoEquipo;
     private Set<Solicitante> solicitante;
 
-    public MaterialModel(){
+    public EquipoModel(){
 
     }
 }

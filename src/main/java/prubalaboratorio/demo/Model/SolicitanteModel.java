@@ -1,7 +1,7 @@
 package prubalaboratorio.demo.Model;
 
 import lombok.Data;
-import prubalaboratorio.demo.Entity.Material;
+import prubalaboratorio.demo.Entity.Equipo;
 
 import java.util.Set;
 
@@ -14,7 +14,7 @@ public class SolicitanteModel {
    private String semestre;
    private int estado;
    private String idTipoSolicitante;
-   private Set<Material> materiales;
+   private Set<Equipo> equipos;
 
 
    public SolicitanteModel(){
