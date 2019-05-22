@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface EquipoService {
 
-    public abstract EquipoModel addEquipo(EquipoModel usuarioModel);
+    public abstract EquipoModel addEquipo(EquipoModel equipoModel);
 
     public abstract List<EquipoModel> listAllEquipos();
 
