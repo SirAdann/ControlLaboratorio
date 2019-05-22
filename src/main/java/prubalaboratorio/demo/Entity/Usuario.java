@@ -11,7 +11,7 @@ import javax.persistence.*;
 public class Usuario {
 
     @Id
-    @Column(name="id_usuario")
+    @Column(name = "id_usuario", unique = true, nullable = false)
     private String idUsuario;
     @Column(name = "contrasena", nullable = false, length = 60)
     private String contrasena;
@@ -28,7 +28,6 @@ public class Usuario {
 
 
     public Usuario() {
-        super();
 
     }
 }

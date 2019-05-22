@@ -181,8 +181,14 @@
               </tr>
               </tbody>
             </table>
-            <div th:if="${result == 1}" class="alert alert-success" role="alert">Agregado éxitosamente!</div>
-            <div th:if="${result == 0}" class="alert alert-danger" role="alert">Hubo un error</div>
+
+
+            <div th:switch="${result}">
+              <div th:case="'1'" class="alert alert-success" role="alert">Agregado éxitosamente!</div>
+              <div th:case="'0'" class="alert alert-danger" role="alert">Hubo un error</div>
+            </div>
+            
+
             <a href="#" th:href="@{/user/form?idUsuario=none}">
               <button class="btn btn-lg btn-primary btn-block" type="submit"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Registrar usuario</button>
             </a>

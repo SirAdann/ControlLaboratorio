@@ -13,6 +13,8 @@ public class PrestamoEquipoController {
 @GetMapping("/consulta/usuario")
     public String ConsultarPrestamos(Model model ,@RequestParam(name = "idSolicitante", required = false) String idSolicitante){
 
+
+
     return "vista";
 }
 
