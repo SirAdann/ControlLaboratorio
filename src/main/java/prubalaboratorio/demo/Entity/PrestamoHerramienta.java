@@ -14,8 +14,8 @@ public class PrestamoHerramienta implements Serializable {
     @Column(name="id_solicitante")
     private int idSolicitante;
     @Id
-    @Column(name="id_equipo")
-    private int idEquipo;
+    @Column(name="id_herramienta")
+    private int idHerramienta;
     @Column(name="fecha")
     private Date fecha;
     @OneToOne

@@ -13,7 +13,7 @@ import prubalaboratorio.demo.Model.EquipoModel;
 import prubalaboratorio.demo.Service.impl.EquipoServiceImpl;
 
 @Controller
-@RequestMapping("/materiales")
+@RequestMapping("/equipos")
 public class EquipoController {
 
     @Autowired

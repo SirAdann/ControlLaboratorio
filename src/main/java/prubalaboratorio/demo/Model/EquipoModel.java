@@ -10,6 +10,7 @@ public class EquipoModel {
 
 
     private int idEquipo;
+    private String etiqueta;
     private String marca;
     private Double costo;
     private String modelo;

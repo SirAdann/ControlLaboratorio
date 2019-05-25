@@ -38,6 +38,7 @@ public class Solicitante {
             inverseJoinColumns = @JoinColumn(name = "id_herramienta"))
     private Set<Herramienta> herramientas;
 
+
     public Solicitante() {
 
     }

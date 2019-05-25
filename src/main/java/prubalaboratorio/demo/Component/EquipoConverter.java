@@ -14,6 +14,7 @@ public class EquipoConverter {
         Equipo equipo = new Equipo();
 
         equipo.setIdEquipo(equipoModel.getIdEquipo());
+        equipo.setEtiqueta(equipoModel.getEtiqueta());
         equipo.setMarca(equipoModel.getMarca());
         equipo.setCosto(equipoModel.getCosto());
         equipo.setModelo(equipoModel.getModelo());
@@ -33,6 +34,7 @@ public class EquipoConverter {
     public EquipoModel convertirEquipoaEquipoModel(Equipo equipo){
 
         EquipoModel equipoModel = new EquipoModel();
+        equipoModel.setEtiqueta(equipo.getEtiqueta());
         equipoModel.setIdEquipo(equipo.getIdEquipo());
         equipoModel.setCosto(equipo.getCosto());
         equipoModel.setModelo(equipo.getModelo());

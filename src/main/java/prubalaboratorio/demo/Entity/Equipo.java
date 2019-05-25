@@ -11,8 +11,11 @@ import java.util.Set;
 @Table(name="equipos")
 public class Equipo {
     @Id
+    @GeneratedValue
     @Column(name="id_equipo")
     private int idEquipo;
+    @Column(name="etiqueta")
+    private String etiqueta;
     @Column(name="marca",nullable = false)
     private String marca;
     @Column(name="costo",nullable = false)
