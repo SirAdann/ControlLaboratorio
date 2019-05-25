@@ -121,7 +121,7 @@
         <div class="col-sm-9" id="content">
             <h1>Registro Equipo Computo</h1>
 
-            <form class="form-horizontal" enctype="multipart/form-data" action="#" th:action="@{/materiales/addequipo}" th:object="${equipoModel}" method="post">
+            <form class="form-horizontal" enctype="multipart/form-data" action="#" th:action="@{/equipos/addequipo}" th:object="${equipoModel}" method="post">
                 <fieldset id="account">
                     <legend>Datos del Equipo</legend>
                     <div style="display: none;" class="form-group required">
@@ -136,19 +136,26 @@
                     </div>
                     <div class="form-group required">
                         <!--<label for="input-sort" class="col-sm-2 control-label">ID Equipo </label>-->
-                        <label  class="col-sm-2 control-label">ID Equipo</label>
+
                         <div class="col-sm-10">
                             <!--<input type="text" class="form-control" id="idEquipo" placeholder="ID Equipo" value="" name="firstname">-->
-                            <input type="text" readonly class="form-control" id="input-email" placeholder="ID de Equipo" th:if="${equipoModel.idEquipo != 0}" th:field="*{idEquipo}" th:value="${idEquipo}"></input>
-                            <input type="text" class="form-control" id="input-email" placeholder="ID de Equipo"th:if="${equipoModel.idEquipo == 0}" th:field="*{idEquipo}" th:value="${idEquipo}"></input>
+                            <input type="hidden" readonly class="form-control" id="input-email" placeholder="ID de Equipo" th:if="${equipoModel.idEquipo != 0}" th:field="*{idEquipo}" th:value="${idEquipo}"></input>
+                            <input type="hidden" class="form-control" id="input-email" placeholder="ID de Equipo"th:if="${equipoModel.idEquipo == 0}" th:field="*{idEquipo}" th:value="${idEquipo}"></input>
 
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <!--<label for="input-sort" class="col-sm-2 control-label">Marca</label>-->
+                        <label  class="col-sm-2 control-label">Etiqueta </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" placeholder="Ej: MAQA01"  name="etiquetas" th:field="*{etiqueta}" th:value="${etiqueta}"></input>
                         </div>
                     </div>
                     <div class="form-group required">
                         <!--<label for="input-sort" class="col-sm-2 control-label">Marca</label>-->
                         <label  class="col-sm-2 control-label">Marca </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="Marca"  name="marcas" th:field="*{marca}" th:value="${marca}"></input>
+                            <input type="text" class="form-control" placeholder="Ej: HP"  name="marcas" th:field="*{marca}" th:value="${marca}"></input>
                         </div>
                     </div>
                     <div class="form-group required">
@@ -163,7 +170,7 @@
                         <!--<label for="input-sort" class="col-sm-2 control-label">Modelo</label>-->
                         <label  class="col-sm-2 control-label">Modelo</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="Modelo"  name="modelos" th:field="*{modelo}" th:value="${modelo}"></input>
+                            <input type="text" class="form-control" placeholder="Ej: Pavilon"  name="modelos" th:field="*{modelo}" th:value="${modelo}"></input>
                         </div>
                     </div>
                     <div class="form-group required">
@@ -198,14 +205,19 @@
                         <!--<label for="input-sort" class="col-sm-2 control-label">Capacidad</label>-->
                         <label  class="col-sm-2 control-label">Capacidad</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="Capacidad"  name="capacidades" th:field="*{capacidad}" th:value="${capacidad}"></input>
+                            <input type="text" class="form-control" placeholder="Ej: 500 "  name="capacidades" th:field="*{capacidad}" th:value="${capacidad}"></input>
                         </div>
                     </div>
                     <div class="form-group required">
                         <!--<label for="input-sort" class="col-sm-2 control-label">SOperativo</label>-->
-                        <label  class="col-sm-2 control-label">SOperativo</label>
+                        <label  class="col-sm-2 control-label">Sistema operativo</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="SOPERATIVO"  name="SOperativos" th:field="*{SOperativo}" th:value="${sOperativo}"></input>
+                            <select th:field="*{sOperativo}" class="form-control"  id="input-country" name="country_id">
+                                <option th:value="'Windows'">Windows</option>
+                                <option th:value="'Linux'">Linux</option>
+                                <option th:value="'Windows/Linux'">Windows/Linux</option>
+                                <option th:value="'IOS'">IOS</option>
+                            </select>
                         </div>
                     </div>
                     <div class="form-group required">
