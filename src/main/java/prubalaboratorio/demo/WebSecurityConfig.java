@@ -23,6 +23,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         @Override
         protected void configure(HttpSecurity http) throws Exception {
             http
+                    //No respeta los parametros del index
+                    /**
+                     * Cuando accesas al index deberia mandarte a la vista del login
+                     */
                     .authorizeRequests()
                     .antMatchers("/index/").permitAll()
                     .anyRequest().authenticated()
