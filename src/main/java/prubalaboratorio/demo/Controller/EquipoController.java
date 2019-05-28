@@ -24,7 +24,7 @@ public class EquipoController {
 
     @GetMapping("/cancel")
     public String cancel(){
-        return "redirect:/materiales/showEquipo";
+        return "redirect:/equipos/showEquipo";
     }
 
     @GetMapping("/index")
@@ -59,7 +59,7 @@ public class EquipoController {
             model.addAttribute("result", 1);
         else
             model.addAttribute("result", 0);
-        return "redirect:/materiales/form";
+        return "redirect:/equipos/form";
     }
 
     @GetMapping("/remove")
