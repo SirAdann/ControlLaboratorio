@@ -1,7 +1,6 @@
 package prubalaboratorio.demo.Component;
-
+/*
 import org.springframework.stereotype.Component;
-import prubalaboratorio.demo.Entity.Equipo;
 import prubalaboratorio.demo.Entity.Herramienta;
 import prubalaboratorio.demo.Model.HerramientaModel;
 
@@ -34,3 +33,4 @@ public class HerramientasConverter {
     }
 
 }
+*/

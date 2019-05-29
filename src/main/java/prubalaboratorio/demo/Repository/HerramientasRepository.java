@@ -1,8 +1,14 @@
 package prubalaboratorio.demo.Repository;
-
+/*
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import prubalaboratorio.demo.Entity.Herramienta;
 
-public interface HerramientasRepository {
-    public abstract Herramienta findByIdEquipo(int idHerramienta);
+import java.io.Serializable;
+
+@Repository("herramientasRepository")
+public interface HerramientasRepository  extends JpaRepository<Herramienta, Serializable> {
+    public abstract Herramienta findByIdHerramienta(int id);
 
 }
+*/

@@ -1,5 +1,5 @@
 package prubalaboratorio.demo.Model;
-
+/*
 import lombok.Data;
 import prubalaboratorio.demo.Entity.Solicitante;
 import prubalaboratorio.demo.Entity.TipoHerramienta;
@@ -18,3 +18,4 @@ public class HerramientaModel {
     private Set<Solicitante> solicitante;
 
 }
+*/

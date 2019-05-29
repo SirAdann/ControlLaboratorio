@@ -8,9 +8,6 @@ import java.io.Serializable;
 
 @Repository("equipoRepository")
 public interface EquipoRepository extends JpaRepository<Equipo,Serializable>{
-
         public abstract Equipo findByIdEquipo(int idEquipo);
 
-
-
-    }
+}

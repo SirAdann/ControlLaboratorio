@@ -18,7 +18,6 @@ public class PrestamoEquipoConverter {
 
 public PrestamoEquipo convertirPrestamoEquipoModelaPrestamoEquipo(PrestamoEquipoModel prestamoEquipoModel){
     PrestamoEquipo prestamoEquipo= new PrestamoEquipo();
-
     prestamoEquipo.setIdEquipo(prestamoEquipoModel.getIdEquipo());
     prestamoEquipo.setIdSolicitante(prestamoEquipoModel.getIdSolicitante());
     prestamoEquipo.setFecha(prestamoEquipo.getFecha());
