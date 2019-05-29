@@ -38,6 +38,13 @@ public class Solicitante {
             inverseJoinColumns = @JoinColumn(name = "id_herramienta"))
     private Set<Herramienta> herramientas;
 
+    @ManyToMany
+    @JoinTable (name = "solicitantes_horarios",
+            joinColumns = @JoinColumn(name = "id_solicitante"),
+            inverseJoinColumns = @JoinColumn(name = "id_horario"))
+    private Set<Horario> horarios;
+
+
 
     public Solicitante() {
 
