@@ -1,9 +1,12 @@
 package prubalaboratorio.demo.Entity;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.util.Set;
 
 @Entity
+@Data
 @Table(name="herramientas")
 public class Herramienta {
 
