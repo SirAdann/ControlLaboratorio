@@ -10,7 +10,7 @@ public class SolicitanteModel {
    private int idSolicitante;
    private String nombres;
    private String apellidos;
-   private  String carrera;
+   private String carrera;
    private String semestre;
    private int estado;
    private String idTipoSolicitante;

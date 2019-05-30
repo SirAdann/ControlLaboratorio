@@ -17,6 +17,7 @@ public class PrestamoEquipoController {
 
 
 
+
         return "prestamo";// se borra vista se agrega prestamo
     }
 
