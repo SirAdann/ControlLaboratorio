@@ -121,7 +121,7 @@
         <div class="col-sm-9" id="content">
             <h1>Registro de Herramientas</h1>
 
-            <form class="form-horizontal" enctype="multipart/form-data" action="#" th:action="@{/equipos/addherramientas}" th:object="${herramientaModel}" method="post">
+            <form class="form-horizontal" enctype="multipart/form-data" action="#" th:action="@{/herramientas/addHerramientas}" th:object="${herramientaModel}" method="post">
                 <fieldset id="account">
                     <legend>Datos de la Herramienta</legend>
                     <div style="display: none;" class="form-group required">
@@ -139,6 +139,7 @@
 
                         <div class="col-sm-10">
                             <!--<input type="text" class="form-control" id="idEquipo" placeholder="ID Equipo" value="" name="firstname">-->
+
                             <input type="hidden" readonly class="form-control"  placeholder="ID de la Herramienta" th:if="${herramientaModel.idHerramienta != 0}" th:field="*{idHerramienta}" th:value="${idHerramienta}"></input>
                             <input type="hidden" class="form-control"  placeholder="ID de la Herramienta" th:if="${herramientaModel.idHerramienta == 0}" th:field="*{idHerramienta}" th:value="${idHerramienta}"></input>
 
@@ -179,9 +180,9 @@
                         <div class="col-sm-10">
                             <select class="form-control" id="ram" name="Tipo" th:field="*{tipoHerramienta}">
                                 <!--<option th:value=""> --- Seleccione --- </option>-->
-                                <option th:value="2">Conectores</option>
-                                <option th:value="4">Corte</option>
-                                <option th:value="8">Limpieza</option>
+                                <option th:value="'1'"> Conectores </option>
+                                <option th:value="'2'">Corte</option>
+                                <option th:value="'3'">Limpieza</option>
                             </select>
 
                         </div>
