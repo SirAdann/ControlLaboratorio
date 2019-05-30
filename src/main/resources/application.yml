@@ -23,6 +23,3 @@ spring:
 
   thymeleaf:
     cache: true
-
-
-

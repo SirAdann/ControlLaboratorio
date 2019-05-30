@@ -21,7 +21,7 @@ public class Usuario {
     private String apellido;
     @OneToOne
     @JoinColumn(name="id_tipousuario")
-    private TipoUsuario idTipousuario;
+    private TipoUsuario idtipousuario;
     @Column(name="administrador")
     private boolean administrador;
 
