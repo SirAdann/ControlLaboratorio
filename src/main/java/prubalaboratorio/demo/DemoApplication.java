@@ -4,8 +4,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
-//(scanBasePackages={
-//         "prubalaboratorio.demo.Repository"})
 @SpringBootApplication
 public class DemoApplication {
 

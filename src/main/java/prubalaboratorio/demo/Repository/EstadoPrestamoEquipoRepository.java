@@ -9,8 +9,5 @@ import java.io.Serializable;
 
 @Repository("estadoPrestamoEquipoRepository")
 public interface EstadoPrestamoEquipoRepository extends JpaRepository<EstadoPrestamoEquipo, Serializable> {
-
     public abstract EstadoPrestamoEquipo findByIdEstado(int idEstado);
-
-
 }
