@@ -123,8 +123,10 @@
         </div>
         <div class="col-sm-9" id="content">
             <h1>Registro Usuario</h1>
+            <form class="form-horizontal" enctype="multipart/form-data" action="#" th:action="@{/user/adduser}" th:object="${usuarioModel}" method="post">
 
-                <fieldset id="account">
+
+            <fieldset id="account">
                     <legend>Datos Personales</legend>
 
                     <div class="form-group required">
