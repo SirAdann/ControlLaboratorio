@@ -6,12 +6,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import prubalaboratorio.demo.Constant.ViewConstants;
 
 @Controller
-@RequestMapping(name="/prestamo")
+@RequestMapping("/prestamo")
 public class PrestamoController {
 
    @GetMapping("/index")
     public String buscarMatricula(){
-
         return  ViewConstants.BUSCARMATRICULA;
     }
 }

@@ -30,11 +30,8 @@ public class UserController {
 
     @GetMapping("/index")
     public ModelAndView mostrarUsuarios(){
-
         ModelAndView mav = new ModelAndView(ViewConstants.USERS);
         mav.addObject("users",usuarioService.listAllUsers());
-
-
          return mav;
     }
 
