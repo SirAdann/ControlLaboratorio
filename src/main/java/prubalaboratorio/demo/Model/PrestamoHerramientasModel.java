@@ -1,5 +1,5 @@
 package prubalaboratorio.demo.Model;
-/*
+
 import lombok.Data;
 
 import java.util.Date;
@@ -14,3 +14,4 @@ public class PrestamoHerramientasModel {
     public PrestamoHerramientasModel() {
 
     }
+}

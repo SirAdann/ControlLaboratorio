@@ -12,7 +12,7 @@ public class Herramienta {
 
     @Id
     @Column(name="id_herramienta")
-    private int id;
+    private int idHerramienta;
     @Column(name="marca",nullable = false)
     private String marca;
     @Column(name="costo",nullable = false)

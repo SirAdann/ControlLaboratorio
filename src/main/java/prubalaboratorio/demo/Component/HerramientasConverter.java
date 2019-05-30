@@ -1,5 +1,5 @@
 package prubalaboratorio.demo.Component;
-/*
+
 import org.springframework.stereotype.Component;
 import prubalaboratorio.demo.Entity.Herramienta;
 import prubalaboratorio.demo.Model.HerramientaModel;
@@ -8,7 +8,7 @@ import prubalaboratorio.demo.Model.HerramientaModel;
 public class HerramientasConverter {
     public Herramienta convertirHerramientasModelHerramientas(HerramientaModel herramientaModel) {
         Herramienta herramienta = new Herramienta();
-        herramienta.setId(herramientaModel.getId());
+        herramienta.setIdHerramienta(herramientaModel.getIdHerramienta());
         herramienta.setMarca(herramientaModel.getMarca());
         herramienta.setCosto(herramientaModel.getCosto());
         herramienta.setCantidad(herramientaModel.getCantidad());
@@ -21,7 +21,7 @@ public class HerramientasConverter {
 
     public HerramientaModel convertirHerramientaaHerramientaModel(Herramienta herramienta){
         HerramientaModel herramientaModel = new HerramientaModel();
-        herramientaModel.setId(herramienta.getId());
+        herramientaModel.setIdHerramienta(herramienta.getIdHerramienta());
         herramientaModel.setMarca(herramienta.getMarca());
         herramientaModel.setCosto(herramienta.getCosto());
         herramientaModel.setCantidad(herramienta.getCantidad());
@@ -33,4 +33,3 @@ public class HerramientasConverter {
     }
 
 }
-*/

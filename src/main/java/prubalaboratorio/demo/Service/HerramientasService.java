@@ -1,5 +1,5 @@
 package prubalaboratorio.demo.Service;
-/*
+
 import prubalaboratorio.demo.Entity.Herramienta;
 import prubalaboratorio.demo.Model.HerramientaModel;
 
@@ -16,4 +16,3 @@ public interface HerramientasService {
 
     public abstract HerramientaModel findHerramientasByIdHerramientasModel(int id);
 }
-*/

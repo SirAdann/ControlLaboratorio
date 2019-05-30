@@ -1,5 +1,5 @@
 package prubalaboratorio.demo.Service.impl;
-/*
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -56,5 +56,6 @@ public class HerramientasServiceImpl implements HerramientasService {
         return herramientasConverter.convertirHerramientaaHerramientaModel(findHerramientasByIdHerramientas(id));
     }
 
-}}*/
+}
+
 
