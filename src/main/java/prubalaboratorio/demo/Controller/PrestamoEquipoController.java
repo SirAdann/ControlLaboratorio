@@ -2,21 +2,25 @@ package prubalaboratorio.demo.Controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
+import prubalaboratorio.demo.Constant.ViewConstants;
 
 @Controller
-@RequestMapping(name="prestamo")
+@RequestMapping(name="/prestamo/equipo")
 public class PrestamoEquipoController {
 
-@GetMapping("/consulta/usuario")
-    public String ConsultarPrestamos(Model model ,@RequestParam(name = "idSolicitante", required = false) String idSolicitante){
 
 
 
-    return "prestamo";// se borra vista se agrega prestamo
-}
+    @GetMapping("/consulta/usuario")
+    public String consultarPrestamosEquipos(Model model ,@RequestParam(name = "matricula", required = false) String matricula){
+
+
+
+        return "prestamo";// se borra vista se agrega prestamo
+    }
+
+
 
 
 

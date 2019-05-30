@@ -9,6 +9,8 @@ public class ViewConstants {
         public static final String INDEX2 = "indexNormal";
         public static final String HERRAMIENTAS = "registroHerramientas";
         public static final String EQUIPO = "registroEquipo";
+        public static final String BUSCARMATRICULA = "buscarMatricula";
+
 
 
 
