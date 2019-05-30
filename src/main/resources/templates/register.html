@@ -2,11 +2,11 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <html lang="en">
 <head>
-    <title>Control de Laboratorio</title><meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<title>Control de Laboratorio</title><meta http-equiv="content-type" content="text/html;charset=utf-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="e-commerce site well design with responsive view." />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="e-commerce site well design with responsive view." />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 
     <link th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css}" rel="stylesheet" media="screen" />
@@ -29,83 +29,83 @@
 <body class="account-register col-2">
 <div class="preloader loader" style="display: block; background:#f2f2f2;"> <img th:src="@{/image/loader.gif}" alt="#"/></div>
 <header>
-    <div class="header-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="top-left pull-left">
-                        <div class="language">
-                            <form action="#" method="post" enctype="multipart/form-data" id="language">
-                                <div class="btn-group">
-                                    <button class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> <img th:src="@{/image/flags/gb.png}" alt="English" title="English">English <i class="fa fa-caret-down"></i></button>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#"><img th:src="@{/image/flags/lb.png}" alt="Arabic" title="Arabic"> Arabic</a></li>
-                                        <li><a href="#"><img th:src="@{/image/flags/gb.png}" alt="English" title="English"> English</a></li>
-                                    </ul>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="currency">
-                            <form action="#" method="post" enctype="multipart/form-data" id="currency">
-                                <div class="btn-group">
-
-
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="top-right pull-right">
-                        <div id="top-links" class="nav pull-right">
-
-                            </li>
-
-                            </ul>
-                            <div class="search-box">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+  <div class="header-top">
     <div class="container">
-        <div class="header-inner">
-
-
-            <div class="col-sm-4 col-xs-12 header-right">
-                <div id="cart" class="btn-group btn-block">
-
-                    <ul class="dropdown-menu pull-right cart-dropdown-menu">
-                        <li>
-                            <table class="table table-striped">
-                                <tbody>
-                                <tr>
-
-                                </tr>
-                                </tbody>
-                            </table>
-                        </li>
-                        <li>
-                            <div>
-                                <table class="table table-bordered">
-                                    <tbody>
-
-                                    </tbody>
-                                </table>
-                            </div>
-                        </li>
-                    </ul>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="top-left pull-left">
+            <div class="language">
+              <form action="#" method="post" enctype="multipart/form-data" id="language">
+                <div class="btn-group">
+                  <button class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> <img th:src="@{/image/flags/gb.png}" alt="English" title="English">English <i class="fa fa-caret-down"></i></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#"><img th:src="@{/image/flags/lb.png}" alt="Arabic" title="Arabic"> Arabic</a></li>
+                    <li><a href="#"><img th:src="@{/image/flags/gb.png}" alt="English" title="English"> English</a></li>
+                  </ul>
                 </div>
+              </form>
             </div>
-        </div>
-        <nav id="menu" class="navbar">
-            <div class="nav-inner">
-            </div>
+            <div class="currency">
+              <form action="#" method="post" enctype="multipart/form-data" id="currency">
+                <div class="btn-group">
 
+
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="top-right pull-right">
+            <div id="top-links" class="nav pull-right">
+
+                </li>
+
+              </ul>
+              <div class="search-box">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+  <div class="container">
+    <div class="header-inner">
+
+
+      <div class="col-sm-4 col-xs-12 header-right">
+        <div id="cart" class="btn-group btn-block">
+
+          <ul class="dropdown-menu pull-right cart-dropdown-menu">
+            <li>
+              <table class="table table-striped">
+                <tbody>
+                  <tr>
+
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+            <li>
+              <div>
+                <table class="table table-bordered">
+                  <tbody>
+
+                  </tbody>
+                </table>
+                 </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <nav id="menu" class="navbar">
+      <div class="nav-inner">
+         </div>
+
+      </div>
     </nav>
-    </div>
+  </div>
 </header>
 <div class="container">
     <ul class="breadcrumb">
@@ -118,7 +118,7 @@
             <div class="column-block">
 
                 <div class="account-block">
-                </div>
+                     </div>
             </div>
         </div>
         <div class="col-sm-9" id="content">
@@ -126,14 +126,14 @@
             <form class="form-horizontal" enctype="multipart/form-data" action="#" th:action="@{/user/adduser}" th:object="${usuarioModel}" method="post">
 
 
-                <fieldset id="account">
+            <fieldset id="account">
                     <legend>Datos Personales</legend>
 
                     <div class="form-group required">
                         <label  class="col-sm-2 control-label">Nombre (s) </label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" placeholder="Nombre"  name="firstname" th:field="*{nombre}" th:value="${nombre}"></input>
-                        </div>
+                    </div>
                     </div>
                     <div class="form-group required">
                         <label  class="col-sm-2 control-label">Apellidos</label>
@@ -174,7 +174,7 @@
                         <label  class="col-sm-2 control-label">Contraseña</label>
                         <div class="col-sm-10">
                             <input type="password" class="form-control" id="input-password" placeholder="Contraseña"  th:field="*{contrasena}" th:value="${contrasena}"></input>
-                        </div>
+                    </div>
 
                 </fieldset>
 
@@ -205,17 +205,17 @@
     </div>
 </div>
 <footer>
-    <div class="container">
+  <div class="container">
 
-        <div class="row">
+    <div class="row">
 
-        </div>
-    </div>
-    <a id="scrollup">Scroll</a> </footer>
+    </div>    
+  </div>
+  <a id="scrollup">Scroll</a> </footer>
 <div class="footer-bottom">
-    <div class="container">
-        <div class="copyright"> &nbsp;<a class="yourstore" th:href="@{http://www.lionode.com/}"> </a> </div>
+  <div class="container">
+    <div class="copyright"> &nbsp;<a class="yourstore" th:href="@{http://www.lionode.com/}"> </a> </div>
 
-    </div>
+  </div>
 </div></body>
 </html>

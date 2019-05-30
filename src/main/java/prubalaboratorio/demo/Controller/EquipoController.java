@@ -27,15 +27,13 @@ public class EquipoController {
         return "redirect:/equipos/showEquipo";
     }
 
-    @GetMapping("/index")
+    @GetMapping("/showEquipo")
     public ModelAndView MostrarEquipos(){
-
         ModelAndView mav = new ModelAndView(ViewConstants.EQUIPO);
         mav.addObject("equipo", equipoService.listAllEquipos());
-
-
         return mav;
     }
+
 
     @GetMapping("/form")
     public String redirectEquipoForm(Model model, @RequestParam(name = "idEquipo", required = false) Integer idEquipo) {

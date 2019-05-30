@@ -11,7 +11,7 @@ import java.util.Set;
 public class Solicitante {
     @Id
     @Column(name="id_solicitante")
-    private int IdSolicitante;
+    private int idSolicitante;
     @Column(name="nombres")
     private String nombres;
     @Column(name="apellidos")
