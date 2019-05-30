@@ -13,7 +13,7 @@ public class HerramientaModel {
     private Double costo;
     private int cantidad;
     private String modelo;
-    private TipoHerramienta tipoHerramienta;
+    private int tipoHerramienta;
     private int tipoUso;
     private Set<Solicitante> solicitante;
 

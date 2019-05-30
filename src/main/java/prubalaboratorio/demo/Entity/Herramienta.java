@@ -11,6 +11,7 @@ import java.util.Set;
 public class Herramienta {
 
     @Id
+    @GeneratedValue
     @Column(name="id_herramienta")
     private int idHerramienta;
     @Column(name="marca",nullable = false)

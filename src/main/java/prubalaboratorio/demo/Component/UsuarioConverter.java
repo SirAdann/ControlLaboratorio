@@ -24,7 +24,7 @@ public class UsuarioConverter {
         usuario.setAdministrador(usuarioModel.isAdministrador());
         TipoUsuario tipoUsuario = tipoUsuarioRepository.findByIdTipoUsuario(usuarioModel.getIdTipoUsuario());
 
-        usuario.setIdTipousuario(tipoUsuario);
+        usuario.setIdtipousuario(tipoUsuario);
 
         return usuario;
     }
@@ -37,7 +37,7 @@ public class UsuarioConverter {
         usuarioModel.setNombre(usuario.getNombre());
         usuarioModel.setApellido(usuario.getApellido());
         usuarioModel.setAdministrador(usuario.isAdministrador());
-        usuarioModel.setIdTipoUsuario(usuario.getIdTipousuario().getIdTipoUsuario());
+        usuarioModel.setIdTipoUsuario(usuario.getIdtipousuario().getIdTipoUsuario());
 
 
 
