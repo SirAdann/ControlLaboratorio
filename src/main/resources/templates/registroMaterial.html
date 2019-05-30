@@ -140,8 +140,8 @@
                         <div class="col-sm-10">
                             <!--<input type="text" class="form-control" id="idEquipo" placeholder="ID Equipo" value="" name="firstname">-->
 
-                            <input type="hidden" readonly class="form-control"  placeholder="ID de la Herramienta" th:if="${herramientaModel.idHerramienta != 0}" th:field="*{idHerramienta}" th:value="${idHerramienta}"></input>
-                            <input type="hidden" class="form-control"  placeholder="ID de la Herramienta" th:if="${herramientaModel.idHerramienta == 0}" th:field="*{idHerramienta}" th:value="${idHerramienta}"></input>
+                            <input type="hidden" readonly class="form-control"  placeholder="ID de la Herramienta" th:if="${herramientaModel.idHerramienta != none}" th:field="*{idHerramienta}" th:value="${idHerramienta}"></input>
+                            <input type="hidden" class="form-control"  placeholder="ID de la Herramienta" th:if="${herramientaModel.idHerramienta == none}" th:field="*{idHerramienta}" th:value="${idHerramienta}"></input>
 
                         </div>
                     </div>
@@ -181,8 +181,8 @@
                             <select class="form-control" id="ram" name="Tipo" th:field="*{tipoHerramienta}">
                                 <!--<option th:value=""> --- Seleccione --- </option>-->
                                 <option th:value="'1'"> Conectores </option>
-                                <option th:value="'2'">Corte</option>
-                                <option th:value="'3'">Limpieza</option>
+                                <option th:value="'2'"> Corte</option>
+                                <option th:value="'3'"> Limpieza</option>
                             </select>
 
                         </div>
