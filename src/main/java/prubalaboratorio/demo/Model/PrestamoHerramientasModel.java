@@ -14,5 +14,3 @@ public class PrestamoHerramientasModel {
     public PrestamoHerramientasModel() {
 
     }
-}
-*/
