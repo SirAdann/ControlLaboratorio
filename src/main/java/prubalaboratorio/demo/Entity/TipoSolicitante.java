@@ -16,7 +16,6 @@ public class TipoSolicitante {
     String tipoSolicitante;
 
 
-    public TipoSolicitante(String tipoSolicitante) {
-        this.tipoSolicitante = tipoSolicitante;
+    public TipoSolicitante() {
     }
 }

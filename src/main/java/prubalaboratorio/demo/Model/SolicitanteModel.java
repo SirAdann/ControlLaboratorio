@@ -13,8 +13,7 @@ public class SolicitanteModel {
    private String carrera;
    private String semestre;
    private int estado;
-   private String idTipoSolicitante;
-   private Set<Equipo> equipos;
+   private int idTipoSolicitante;
 
 
    public SolicitanteModel(){

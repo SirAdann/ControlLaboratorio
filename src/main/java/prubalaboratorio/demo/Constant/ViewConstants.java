@@ -12,6 +12,8 @@ public class ViewConstants {
         public static final String EQUIPO = "registroEquipo";
         public static final String MOSTRAREQUIPO = "ListaEquipo";
         public static final String BUSCARMATRICULA = "buscarMatricula";
+        public static final String CONSULTASOLICITANTE = "consultaSolicitante";
+
 
 
 

@@ -11,6 +11,9 @@ import prubalaboratorio.demo.Constant.ViewConstants;
 import prubalaboratorio.demo.Model.SolicitanteModel;
 import prubalaboratorio.demo.Service.impl.SolicitanteServiceImpl;
 
+import static prubalaboratorio.demo.Constant.ViewConstants.BUSCARMATRICULA;
+import static prubalaboratorio.demo.Constant.ViewConstants.CONSULTASOLICITANTE;
+
 @Controller
 @RequestMapping("/prestamo")
 public class PrestamoController {
@@ -22,7 +25,7 @@ public class PrestamoController {
     @GetMapping("/index")
     public String buscarMatricula() {
 
-        return "ListaMaterial2";
+        return BUSCARMATRICULA;
     }
 
 
@@ -33,18 +36,22 @@ public class PrestamoController {
         SolicitanteModel solicitanteModel = new SolicitanteModel();
         if (idSolicitante != 0) {
             solicitanteModel= solicitanteService.findSolicitanteByIdSolicitanteModel(idSolicitante);
-            System.out.println("MODELO : " + solicitanteModel);
+            System.out.println("MODELOSOLICITANTE : " + solicitanteModel);
             if (solicitanteModel.equals(null)) {
                 System.out.println("no se encontro solicitante");
 
                 model.addAttribute("respuesta","no se encontro solicitante");
+                return "redirect:/prestamo/index";
+
             } else {
                 model.addAttribute("solicitanteModel", solicitanteModel);
 
-                return "redirect:/prestamo/index";
+                return CONSULTASOLICITANTE;
 
             }
-            return ViewConstants.BUSCARMATRICULA;
+       // }if(idSolicitante==0){
+
+
 
         }
 
