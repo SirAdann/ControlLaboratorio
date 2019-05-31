@@ -12,6 +12,8 @@ import prubalaboratorio.demo.Constant.ViewConstants;
 import prubalaboratorio.demo.Model.EquipoModel;
 import prubalaboratorio.demo.Service.impl.EquipoServiceImpl;
 
+import java.util.List;
+
 @Controller
 @RequestMapping("/equipos")
 public class EquipoController {
@@ -29,8 +31,10 @@ public class EquipoController {
 
     @GetMapping("/showEquipo")
     public ModelAndView MostrarEquipos(){
-        ModelAndView mav = new ModelAndView(ViewConstants.EQUIPO);
+        ModelAndView mav = new ModelAndView(ViewConstants.MOSTRAREQUIPO);
         mav.addObject("equipo", equipoService.listAllEquipos());
+        //List<EquipoModel> lista = equipoService.listAllEquipos();
+        //System.out.println("LISTA DE LOS EQUIPOS"+ lista);
         return mav;
     }
 
