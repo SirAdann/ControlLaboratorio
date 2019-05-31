@@ -7,7 +7,8 @@ public class ViewConstants {
         public static final String LOGIN = "login";
         public static final String INDEX = "indexAdmin";
         public static final String INDEX2 = "indexNormal";
-        public static final String HERRAMIENTAS = "registroMaterial";
+        public static final String HERRAMIENTAS_FORM = "registroMaterial";
+        public static final String HERRAMIENTAS = "ListaMaterial2";
         public static final String EQUIPO = "registroEquipo";
         public static final String MOSTRAREQUIPO = "ListaEquipo";
         public static final String BUSCARMATRICULA = "buscarMatricula";

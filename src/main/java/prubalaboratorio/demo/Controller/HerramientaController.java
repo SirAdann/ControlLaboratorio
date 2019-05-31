@@ -34,6 +34,7 @@ public class HerramientaController {
         return mav;
     }
 
+
     @GetMapping("/form")
     public String redirectHerramientaForm(Model model, @RequestParam(name = "id", required = false) Integer id) {
         id=0;
@@ -43,7 +44,7 @@ public class HerramientaController {
             System.out.println("HERRAMIENTA : "+ herramientaModel);
         }
         model.addAttribute("herramientaModel", herramientaModel);
-        return ViewConstants.HERRAMIENTAS;
+        return ViewConstants.HERRAMIENTAS_FORM;
     }
 
     @PostMapping("/addHerramientas")
@@ -57,7 +58,7 @@ public class HerramientaController {
     }
 
     @GetMapping("/remove")
-    public ModelAndView removerHerramienta(@RequestParam(name = "id", required = true) int id) {
+    public ModelAndView removeHerramienta(@RequestParam(name = "id", required = true) int id) {
         herramientasService.removerHerramienta(id);
         return MostrarHerramientas();
     }
