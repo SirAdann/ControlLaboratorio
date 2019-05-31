@@ -8,7 +8,6 @@ import prubalaboratorio.demo.Constant.ViewConstants;
 
 @Controller
 public class HomeController {
-
     @GetMapping("index")
     public String mostrarPrincipal(){
 
