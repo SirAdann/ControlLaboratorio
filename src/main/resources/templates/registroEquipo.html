@@ -148,21 +148,21 @@
                         <!--<label for="input-sort" class="col-sm-2 control-label">Marca</label>-->
                         <label  class="col-sm-2 control-label">Etiqueta </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="Ej: MAQA01"  name="etiquetas" th:field="*{etiqueta}" th:value="${etiqueta}"></input>
+                            <input type="text" class="form-control" placeholder="Ej: MAQA01"  name="etiquetas" th:field="*{etiqueta}" th:value="${etiqueta}" required></input>
                         </div>
                     </div>
                     <div class="form-group required">
                         <!--<label for="input-sort" class="col-sm-2 control-label">Marca</label>-->
                         <label  class="col-sm-2 control-label">Marca </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="Ej: HP"  name="marcas" th:field="*{marca}" th:value="${marca}"></input>
+                            <input type="text" class="form-control" placeholder="Ej: HP"  name="marcas" th:field="*{marca}" th:value="${marca}" required></input>
                         </div>
                     </div>
                     <div class="form-group required">
                         <!--<label for="input-sort" class="col-sm-2 control-label">Costo</label>-->
                         <label  class="col-sm-2 control-label">Costo</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="Costo"  name="costos" th:field="*{costo}" th:value="${costo}"></input>
+                            <input type="text" class="form-control" placeholder="Costo"  name="costos" th:field="*{costo}" th:value="${costo}" required></input>
                         </div>
                     </div>
 
@@ -170,21 +170,21 @@
                         <!--<label for="input-sort" class="col-sm-2 control-label">Modelo</label>-->
                         <label  class="col-sm-2 control-label">Modelo</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="Ej: Pavilon"  name="modelos" th:field="*{modelo}" th:value="${modelo}"></input>
+                            <input type="text" class="form-control" placeholder="Ej: Pavilon"  name="modelos" th:field="*{modelo}" th:value="${modelo}" required></input>
                         </div>
                     </div>
                     <div class="form-group required">
                         <!--<label for="input-sort" class="col-sm-2 control-label">ID Tipo De Material</label>-->
                         <label  class="col-sm-2 control-label"> Tipo de Equipo</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="Tipo"  name="tipos" th:field="*{tipoEquipo}" th:value="${tipoEquipo}"></input>
+                            <input type="text" class="form-control" placeholder="Tipo"  name="tipos" th:field="*{tipoEquipo}" th:value="${tipoEquipo}" required></input>
                         </div>
                     </div>
                     <div class="form-group required">
                         <!--<label for="input-sort" class="col-sm-2 control-label">Ram</label>-->
                         <label  class="col-sm-2 control-label">Ram</label>
                         <div class="col-sm-10">
-                            <select class="form-control" id="ram" name="Ram" th:field="*{ram}">
+                            <select class="form-control" id="ram" name="Ram" th:field="*{ram}" required>
                                 <!--<option th:value=""> --- Seleccione --- </option>-->
                                 <option th:value="2">2 GB</option>
                                 <option th:value="4">4 GB</option>
@@ -198,21 +198,21 @@
                         <!--<label for="input-sort" class="col-sm-2 control-label">Procesador</label>-->
                         <label  class="col-sm-2 control-label">Procesador</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="Procesador"  name="procesadores" th:field="*{procesador}" th:value="${procesador}"></input>
+                            <input type="text" class="form-control" placeholder="Procesador"  name="procesadores" th:field="*{procesador}" th:value="${procesador}" required></input>
                         </div>
                     </div>
                     <div class="form-group required">
                         <!--<label for="input-sort" class="col-sm-2 control-label">Capacidad</label>-->
                         <label  class="col-sm-2 control-label">Capacidad</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="Ej: 500 "  name="capacidades" th:field="*{capacidad}" th:value="${capacidad}"></input>
+                            <input type="text" class="form-control" placeholder="Ej: 500 "  name="capacidades" th:field="*{capacidad}" th:value="${capacidad}" required></input>
                         </div>
                     </div>
                     <div class="form-group required">
                         <!--<label for="input-sort" class="col-sm-2 control-label">SOperativo</label>-->
                         <label  class="col-sm-2 control-label">Sistema operativo</label>
                         <div class="col-sm-10">
-                            <select th:field="*{sOperativo}" class="form-control"  id="input-country" name="country_id">
+                            <select th:field="*{sOperativo}" class="form-control"  id="input-country" name="country_id" required>
                                 <option th:value="'Windows'">Windows</option>
                                 <option th:value="'Linux'">Linux</option>
                                 <option th:value="'Windows/Linux'">Windows/Linux</option>
@@ -224,7 +224,7 @@
                         <!--<label for="input-sort" class="col-sm-2 control-label">Estado</label>-->
                         <label  class="col-sm-2 control-label">Tipo de uso</label>
                         <div class="col-sm-10">
-                            <select th:field="*{tipoUso}" class="form-control"  id="input-country" name="country_id">
+                            <select th:field="*{tipoUso}" class="form-control"  id="input-country" name="country_id" required>
                                 <option th:value="'0'">Docente</option>
                                 <option th:value="'1'">Administrativo</option>
                                 <option th:value="'2'">Alumno</option>
@@ -241,7 +241,7 @@
                     <!--<label for="input-sort" class="col-sm-2 control-label">Estado</label>-->
                     <label  class="col-sm-2 control-label">Estado</label>
                     <div class="col-sm-10">
-                        <select th:field="*{estadoEquipo}" class="form-control"  id="input-country" name="country_id">
+                        <select th:field="*{estadoEquipo}" class="form-control"  id="input-country" name="country_id" required>
                             <option th:value="'0'">Obsoleto</option>
                             <option th:value="'1'">Buen estado</option>
 
@@ -263,7 +263,8 @@
                     </div>
 
                     <div class="pull-right"><a class="salir" href="login.html"><b></b></a>
-                        <a class="btn btn-primary" th:href="@{/form}">Cancelar</a>
+                        <!--<a class="btn btn-primary" th:href="@{/form}">Cancelar</a>-->
+                        <a class="btn btn-primary" th:href="@{/equipos/showEquipo}">Cancelar</a>
 
                     </div>
 

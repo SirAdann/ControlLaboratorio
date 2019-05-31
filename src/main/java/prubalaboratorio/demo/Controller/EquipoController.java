@@ -30,18 +30,17 @@ public class EquipoController {
     }
 
     @GetMapping("/showEquipo")
-    public ModelAndView MostrarEquipos(){
-        ModelAndView mav = new ModelAndView(ViewConstants.MOSTRAREQUIPO);
-        mav.addObject("equipo", equipoService.listAllEquipos());
-        //List<EquipoModel> lista = equipoService.listAllEquipos();
-        //System.out.println("LISTA DE LOS EQUIPOS"+ lista);
-        return mav;
+        public ModelAndView MostrarEquipos(){
+            ModelAndView mav = new ModelAndView(ViewConstants.MOSTRAREQUIPO);
+            mav.addObject("equipo", equipoService.listAllEquipos());
+
+            return mav;
     }
 
 
     @GetMapping("/form")
     public String redirectEquipoForm(Model model, @RequestParam(name = "idEquipo", required = false) Integer idEquipo) {
-    idEquipo=0;
+    //idEquipo=0;
 
         EquipoModel equipoModel = new EquipoModel();
 
@@ -61,7 +60,7 @@ public class EquipoController {
             model.addAttribute("result", 1);
         else
             model.addAttribute("result", 0);
-        return "redirect:/equipos/form";
+        return "redirect:/equipos/showEquipo";
     }
 
     @GetMapping("/remove")
