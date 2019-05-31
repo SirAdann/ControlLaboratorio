@@ -58,7 +58,7 @@ public class HerramientaController {
     }
 
     @GetMapping("/remove")
-    public ModelAndView removeHerramienta(@RequestParam(name = "id", required = true) Integer id) {
+    public ModelAndView removeHerramienta(@RequestParam(name = "id", required = true) int id) {
         herramientasService.removerHerramienta(id);
         return MostrarHerramientas();
     }
